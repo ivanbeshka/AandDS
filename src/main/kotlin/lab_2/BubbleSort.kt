@@ -13,13 +13,13 @@ fun bubbleSort(arr: IntArray) {
 }
 
 fun main() {
-    val arr = intArrayOf(12, 11, 13, 5, 6, 7)
-
     println("Given arr")
-    printArr(arr)
+    printArr(data)
 
-    bubbleSort(arr)
+    val startTime = System.currentTimeMillis()
+    bubbleSort(data)
+    println("sort time: ${System.currentTimeMillis() - startTime}")
 
     println("Sorted arr")
-    printArr(arr)
+    printArr(data)
 }

@@ -56,14 +56,14 @@ fun merge(arr: IntArray, l: Int, m: Int, r: Int) {
 
 // Main function that sorts arr[l..r] using
 // merge()
-fun sort(arr: IntArray, l: Int, r: Int) {
+fun mergeSort(arr: IntArray, l: Int, r: Int) {
     if (l < r) {
         // Find the middle point
         val m = l + (r - l) / 2
 
         // Sort first and second halves
-        sort(arr, l, m)
-        sort(arr, m + 1, r)
+        mergeSort(arr, l, m)
+        mergeSort(arr, m + 1, r)
 
         // Merge the sorted halves
         merge(arr, l, m, r)
@@ -71,13 +71,13 @@ fun sort(arr: IntArray, l: Int, r: Int) {
 }
 
 fun main() {
-    val arr = intArrayOf(12, 11, 13, 5, 6, 7)
-
     println("Given arr")
-    printArr(arr)
+    printArr(data)
 
-    sort(arr, 0, arr.size - 1)
+    val startTime = System.currentTimeMillis()
+    mergeSort(data, 0, data.size - 1)
+    println("sort time: ${System.currentTimeMillis() - startTime}")
 
     println("Sorted arr")
-    printArr(arr)
+    printArr(data)
 }

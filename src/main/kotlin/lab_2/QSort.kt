@@ -8,7 +8,7 @@ fun quickSort(arr: IntArray, begin: Int, end: Int) {
     }
 }
 
-private fun partition(arr: IntArray, begin: Int, end: Int): Int {
+fun partition(arr: IntArray, begin: Int, end: Int): Int {
     val pivot = arr[end]
     var i = begin - 1
     for (j in begin until end) {
@@ -22,14 +22,14 @@ private fun partition(arr: IntArray, begin: Int, end: Int): Int {
 }
 
 fun main() {
-    val arr = intArrayOf(12, 11, 13, 5, 6, 7)
-
     println("Given arr")
-    printArr(arr)
+    printArr(data)
 
-    quickSort(arr, 0, arr.size - 1)
+    val startTime = System.currentTimeMillis()
+    quickSort(data, 0, data.size - 1)
+    println("sort time: ${System.currentTimeMillis() - startTime}")
 
     println("Sorted arr")
-    printArr(arr)
+    printArr(data)
 }
 

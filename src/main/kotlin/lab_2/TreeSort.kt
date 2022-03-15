@@ -58,13 +58,15 @@ class Tree
 
 fun main() {
     val tree = Tree()
-    val arr = intArrayOf(5, 4, 7, 2, 11)
 
     println("Given arr")
-    printArr(arr)
+    printArr(data)
 
-    tree.treeIns(arr)
+    val startTime = System.currentTimeMillis()
+    tree.treeIns(data)
 
     println("Sorted arr")
     tree.inorderRec(tree.root)
+    println()
+    println("sort time: ${System.currentTimeMillis() - startTime}")
 }
