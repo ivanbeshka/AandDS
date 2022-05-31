@@ -1,7 +1,5 @@
 package lab_2
 
-import java.util.*
-
 fun printArr(arr: IntArray) {
     arr.forEach {
         print("$it ")

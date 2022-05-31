@@ -2,7 +2,6 @@ package lab_1
 
 import java.math.BigInteger
 
-
 val characters = charArrayOf(
     '#', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И',
     'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С',

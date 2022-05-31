@@ -32,11 +32,11 @@ class Number(private val byteArray: ByteArray) {
 }
 
 fun main() {
-    val num1 = Number(1000000000000000)
+    val num1 = Number(100)
     val num2 = Number(-191)
     println(num1)
     println(num2)
-    println(num1 + num2)
+    println((num1 + num2))
     println(num1 - num2)
     println(num1 / num2)
     println(num1 * num2)
